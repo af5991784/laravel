@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Index@render');
+
+Route::get('/category/{item}', 'Item@identificate')->middleware('CheckItem');
+
+
