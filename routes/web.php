@@ -15,4 +15,5 @@ Route::get('/', 'Index@render');
 
 Route::get('/category/{item}', 'Item@identificate')->middleware('CheckItem');
 
+Route::get('/add-to-card', 'Card@add');
 

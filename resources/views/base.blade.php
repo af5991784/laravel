@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     @section('head')  
     @show
@@ -15,6 +16,10 @@
         <div class="header_base"></div>
         <div class="header_cart">
             <div class="cart">
+                
+           
+
+
                 <ul class="cart_elements">
                     <li>
                         <div class="cart_elem_img">
