@@ -15,7 +15,7 @@ class Index extends Controller
         return view('index', [
             'products' => $products,
             'title' => 'Главная',
-            'products_card' => Card::get()
+            'products_card' => Card::getAll()
         ]);
     }
 }

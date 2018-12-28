@@ -64,6 +64,7 @@ class Kernel extends HttpKernel
              
         */
         'CheckItem' => \App\Http\Middleware\CheckItem::class,
+        'HeaderCard' => \App\Http\Middleware\HeaderCard::class,
     ];
 
     /**

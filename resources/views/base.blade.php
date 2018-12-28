@@ -16,47 +16,22 @@
         <div class="header_base"></div>
         <div class="header_cart">
             <div class="cart">
-                
-           
-
-
                 <ul class="cart_elements">
-                    <li>
-                        <div class="cart_elem_img">
-                            <img src="https://avatars.mds.yandex.net/get-mpic/1363210/img_id7884416375422533587.png/orig" alt="">
-                        </div>
-                        <div class="cart_name_product">Название</div>
-                        <div class="cart_remove_img">
-                            <img src="img/cart_remove.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cart_elem_img">
-                            <img src="https://avatars.mds.yandex.net/get-mpic/1363210/img_id7884416375422533587.png/orig" alt="">
-                        </div>
-                        <div class="cart_name_product">Название</div>
-                        <div class="cart_remove_img">
-                            <img src="img/cart_remove.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cart_elem_img">
-                            <img src="https://avatars.mds.yandex.net/get-mpic/1363210/img_id7884416375422533587.png/orig" alt="">
-                        </div>
-                        <div class="cart_name_product">Название</div>
-                        <div class="cart_remove_img">
-                            <img src="img/cart_remove.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cart_elem_img">
-                            <img src="https://avatars.mds.yandex.net/get-mpic/1363210/img_id7884416375422533587.png/orig" alt="">
-                        </div>
-                        <div class="cart_name_product">Название</div>
-                        <div class="cart_remove_img">
-                            <img src="img/cart_remove.png" alt="">
-                        </div>
-                    </li>
+                @if($header_card_elements != null)
+                    @foreach($header_card_elements as $header_card_element)
+                        <li>
+                            <div class="cart_elem_img">
+                                <img src="{{ $header_card_element['img'] }}" alt="">
+                            </div>
+                            <div class="cart_name_product">{{ $header_card_element['name'] }}</div>
+                            <div class="cart_remove_img">
+                                <img src="img/cart_remove.png" alt="">
+                            </div>
+                        </li>
+                    @endforeach
+                @else
+                <h3>Корзина пуста!</h3>
+                @endif
                 </ul>
             </div>
         </div>

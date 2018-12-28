@@ -61,3 +61,7 @@ img {
 .cart_name_product {
     margin: 0 7px;
 }
+
+.card_item {
+    display: flex;
+}

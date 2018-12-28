@@ -11,9 +11,17 @@
 |
 */
 
-Route::get('/', 'Index@render');
 
-Route::get('/category/{item}', 'Item@identificate')->middleware('CheckItem');
 
-Route::get('/add-to-card', 'Card@add');
+Route::middleware(['HeaderCard'])->group(function () {
+    Route::get('/', 'Index@render');
+
+    Route::get('/category/{item}', 'Item@identificate')->middleware('CheckItem');
+
+    Route::get('/add-to-card', 'Card@add');
+
+    Route::get('/remove-in-card', 'Card@remove');
+
+    Route::get('/card', 'Card@page');
+});
 
